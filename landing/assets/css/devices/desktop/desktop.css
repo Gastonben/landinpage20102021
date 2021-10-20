@@ -1,0 +1,79 @@
+.switch-label{
+    display: none;
+  }
+
+.nav, ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    height: 100vh;
+    background: #2C6269;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+  }
+
+  .header > h1 {
+    font-size: 4rem;
+    padding: 0 125px 0 75px;
+     
+  }
+
+.bg-banner{
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-image: url('../../../../img/icons/bg-pattern-home-1.svg');
+}
+
+.first-sec{
+    background: #014E56;
+    height: 100vh;
+    align-items: center;
+}
+
+.first-sec,
+.content,
+.second-sec,
+.profiles{
+    display: flex;
+}
+
+.content{
+    flex-direction: column;
+}
+
+.second-sec{
+    height: 100vh;
+    background:#2c6269e8;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profiles{
+    flex-direction: row;
+}
+
+.pre-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+    background:#F67E7E;
+}
+
+.pre-footer > a{
+    padding: 0 30px 0 0;
+}
+
+footer{
+    background:#014E56;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
