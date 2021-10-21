@@ -2,33 +2,39 @@
     display: none;
   }
 
-.nav, ul{
-    display: flex;
-    justify-content: center;
+  .header-content,
+  .top,
+  .nav, ul{
+      display: flex;
+      justify-content: center;
     align-items: center;
-}
-
+  }
+ 
 .header{
     height: 100vh;
     background: #2C6269;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
   }
 
-  .header > h1 {
+  .header-content > h1 {
     font-size: 4rem;
-    padding: 0 125px 0 75px;
-     
+    margin: 0 0 0 125px;
+  }
+  .header-content >  div{
+      padding: 0 50px 0 100px;
   }
 
-.bg-banner{
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    background-image: url('../../../../img/icons/bg-pattern-home-1.svg');
-}
+   .img-1,
+   .img-2{
+      position: absolute;
+  }
+  
+  .img-1{
+      left: -8%;
+  }
+  .img-2{
+      bottom: 0%;
+      right: 10%;
+  }
 
 .first-sec{
     background: #014E56;
