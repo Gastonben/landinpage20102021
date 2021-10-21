@@ -10,15 +10,25 @@
     align-items: center;
   }
  
+  .top{
+    height: 100px;
+  }
+
 .header{
     height: 100vh;
     background: #2C6269;
+    color: white;
   }
 
   .header-content > h1 {
     font-size: 4rem;
     margin: 0 0 0 125px;
   }
+
+  .header-content > h1 > span{
+      color: #F67E7E;;
+  }
+
   .header-content >  div{
       padding: 0 50px 0 100px;
   }
@@ -40,6 +50,7 @@
     background: #014E56;
     height: 100vh;
     align-items: center;
+    padding: 30px;
 }
 
 .first-sec,
@@ -49,19 +60,57 @@
     display: flex;
 }
 
+.first-sec > h2,
+.info > p{
+    color: white;
+}
+
+.first-sec > h2{
+    font-size: 3rem;
+}
+
+.info > h4{
+    color: #F67E7E;
+}
+
 .content{
     flex-direction: column;
 }
 
 .second-sec{
-    height: 100vh;
+    height: 145vh;
     background:#2c6269e8;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 30px;
+}
+
+.second-sec > h2{
+    font-size: 3rem;
+    padding: 30px 150px 30px 150px;
+}
+.second-sec > h2 > span{
+    color: #6db9b8;
+}
+
+.second-sec > h2,
+.profile > p{
+    color: white;
 }
 
 .profiles{
     flex-direction: row;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile > img{
+    border-radius: 100%;
 }
 
 .pre-footer{
@@ -73,7 +122,10 @@
 }
 
 .pre-footer > a{
-    padding: 0 30px 0 0;
+    border: solid 1px black;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0 100px 0 0;
 }
 
 footer{
@@ -81,5 +133,12 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    color: white;
 }
 
+.rigth-footer {   
+display: flex;
+align-items: flex-end;
+flex-direction: column;
+justify-content: center;
+}
