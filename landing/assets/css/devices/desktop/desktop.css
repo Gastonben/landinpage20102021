@@ -91,8 +91,14 @@
 .first-sec,
 .content,
 .second-sec,
-.profiles{
+.profiles,
+.info{
     display: flex;
+}
+
+.info{
+    font-weight: bold;
+    flex-wrap: wrap;
 }
 
 .first-sec > h2,
