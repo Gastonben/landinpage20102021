@@ -38,6 +38,10 @@
     margin: 0 0 0 125px;
   }
 
+  .header-content > h1::first-letter{
+      text-transform: uppercase;
+  }
+
   .header-content > h1 > span{
       color: #F67E7E;;
   }
