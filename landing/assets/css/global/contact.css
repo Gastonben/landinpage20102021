@@ -144,8 +144,9 @@ section {
 .field{
 	width: 100%;
 	background-color: transparent;
-    border-bottom: 2px solid black;
+    border-style: none;
 	padding: 0.5rem 1rem;
+    font-weight: bold;
 	font-size: 1.1rem;
 	margin-bottom: 22px;
 }
