@@ -1,69 +1,82 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta charset="utf-8";>
+        <link rel="stylesheet" href="../assets/css/global/contact.css">
     </head>
     <body>
-        <header >
-            <span className="logo">myteam</span>
-            <nav>
-                <ul className="nav_links">
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
+        <header class="header">
+            <img class="logo" src="../img/icons/logo.svg" alt="logo"/>
+            <nav className="nav_links">
+                <ul >
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="../pages/about.html">about</a></li>
                 </ul>
             </nav>
-            <a className="header-account"><button>contact us</button></a>
+            <a className="header-account" href="../pages/contact.html"><button>contact us</button></a>
         </header>
         <section>
-            <div>
-                <h1>Contact</h1>
-                <h4>Ask us about</h4>
-                <ul>
-                    <li>
-                        <img>
-                        <h6>The quality of our talent network</h6>
-                    </li>
-                    <li>
-                        <img>
-                        <h6>Usage & implementation of our software</h6>
-                    </li>
-                    <li>
-                        <img>
-                        <h6>How we help drive innovation</h6>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <form>
-                    <input type="text" id="fname" placeholder="Name">
-                    <input type="text" id="fname" placeholder="Email Addres">
-                    <input type="text" id="fname" placeholder="Company Name">
-                    <input type="text" id="fname" placeholder="Title">
-                    <input type="text" id="fname" placeholder="Message">
-                    <a><button>submit</button></a>
-                </form>
+
+            <div class="container">
+                <div class="left">
+                    <h1>Contact</h1>
+                    <h4>Ask us about</h4>
+                    <ul>
+                        <li>
+                            <img src="../img/icons/icon-person.svg">
+                            <h6>The quality of our talent network</h6>
+                        </li>
+                        <li>
+                            <img src="../img/icons/icon-cog.svg">
+                            <h6>Usage & implementation of our software</h6>
+                        </li>
+                        <li>
+                            <img src="../img/icons/icon-chart.svg">
+                            <h6>How we help drive innovation</h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <input type="text" class="field" id="fname" placeholder="Name">
+                    <hr>
+                    <input type="text" class="field" id="fname" placeholder="Email Addres">
+                    <hr>
+                    <input type="text" class="field" id="fname" placeholder="Company Name">
+                    <hr>
+                    <input type="text" class="field" id="fname" placeholder="Title">
+                    <hr>
+                    <textarea type="text" class="field" id="fname" placeholder="Message"></textarea>
+                    <hr>
+                    <button class="btn">submit</button>
+                </div>
             </div>
         </section>
-        <footer>
-            <div class="footer-container">
-                <div>
-                    <h1>myteam</h1>
-                    <span>home</span>
-                    <span>about</span>
+        <footer class="footer">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="../img/icons/logo.svg" alt="Logo">
+                        </a>
+                    </figure>
+                        <div class="texts"> 
+                            <a href="../index.html"><span class="homebtn">home</span></a>
+                            <a href="../pages/about.html"><span class="aboutbtn">about</span></a>
+                        </div>
                 </div>
-                <div>
+                <div class="box">
                     <span>987 Hillcrest Lane</span>
                     <span>Irvine, CA</span>
                     <span>California 92714</span>
                     <span>Call Us : 949-833-7432</span>
                 </div>
-                <div>
-                    <ul>
-                        <li><i></i></li>
-                        <li><i></i></li>
-                        <li><i></i></li>
-                    </ul>
-                    <span>Copyright 2020. All Rights Reserved</span>
+                <div class="box">
+                    <div class="social-media">
+                        <a><img src="../img/icons/icon-facebook.svg"></a>
+                        <a><img src="../img/icons/icon-pinterest.svg"></a>
+                        <a><img src="../img/icons/icon-twitter.svg"></a>
+                    </div>
+                    <p>Copyright 2020. All rights deserved</p>
                 </div>
             </div>
         </footer>
