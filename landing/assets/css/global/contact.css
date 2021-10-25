@@ -166,6 +166,7 @@ textarea{
     background-color: white;
     color: var(--primary);
     cursor: pointer;
+    font-weight: bold;
 }
 
 .footer{
