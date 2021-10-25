@@ -1,4 +1,7 @@
+/* Global imports */
 @import url('../global/global.css');
+@import url('../global/about.css');
+@import url('../global/contact.css');
 
 /* mobile */
 @import url('../devices/mobile/mobile.css') (max-width: 399px);
