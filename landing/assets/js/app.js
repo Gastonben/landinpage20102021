@@ -1,5 +1,5 @@
-//  import asd from ''
-const home = () => {
+const home = async() => {
+    const data = await retrievePersonHome();
     return `
     <section>
     <div class="header">
@@ -45,22 +45,22 @@ const home = () => {
         <div class="profile">
             <img class="quote" src="./img/icons/icon-quotes.svg" alt="quotes">
             <p>“The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”</p>
-            <h3>name</h3>
-            <p>profecion</p>
+            <h3>${data.name1MP}</h3>
+            <p>${data.title1MP}</p>
             <img class="prof" src="./img/icons/avatar-kady.jpg" alt="picture">
         </div>
         <div class="profile">
             <img class="quote" src="./img/icons/icon-quotes.svg" alt="quotes">
             <p>“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”</p>
-            <h3>name</h3>
-            <p>profecion</p>
+            <h3>${data.name2MP}</h3>
+            <p>${data.title2MP}</p>
             <img class="prof" src="./img/icons/avatar-aiysha.jpg" alt="picture">
         </div>
         <div class="profile">
             <img class="quote" src="./img/icons/icon-quotes.svg" alt="quotes">
             <p>“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”</p>
-            <h3>name</h3>
-            <p>profecion</p>
+            <h3>${data.name3MP}</h3>
+            <p>${data.title3MP}</p>
             <img class="prof" src="./img/icons/avatar-arthur.jpg" alt="picture">
         </div>
     </div>
@@ -90,7 +90,8 @@ const home = () => {
       `;
   };
 
-  const about = () => {
+  const about = async () => {
+    const data = await retrievePersonAbout();
     return `
             <section class="about">
                 <div>
@@ -106,38 +107,38 @@ const home = () => {
                 <div class="images">
                     <div class="image1">
                         <img class="profilepic" src="../img/icons/avatar-nikita.jpg">
-                        <h4>name</h4>
-                        <p>profecion</p>
+                        <h4>${data.nameP1}</h4>
+                        <p>${data.titleP1}</p>
                         <img class="crossbtn" src="../img/icons/icon-cross.svg">
                     </div>
                     <div class="image1">
                         <img class="profilepic"  src="../img/icons/avatar-christian.jpg">
-                        <h4>name</h4>
-                        <p>prof</p>
+                        <h4>${data.nameP2}</h4>
+                        <p>${data.titleP2}</p>
                         <img class="crossbtn" src="../img/icons/icon-cross.svg">
                     </div>
                     <div class="image1">
                         <img class="profilepic"  src="../img/icons/avatar-cruz.jpg">
-                        <h4>name</h4>
-                        <p>prof</p>
+                        <h4>${data.nameP3}</h4>
+                        <p>${data.titleP3}</p>
                         <img class="crossbtn" src="../img/icons/icon-cross.svg">
                     </div>
                     <div class="image1">
                         <img class="profilepic"  src="../img/icons/avatar-drake.jpg">
-                        <h4>name</h4>
-                        <p>prof</p>
+                        <h4>${data.nameP4}</h4>
+                        <p>${data.titleP4}</p>
                         <img class="crossbtn" src="../img/icons/icon-cross.svg">
                     </div>
                     <div class="image1">
                         <img class="profilepic"  src="../img/icons/avatar-griffin.jpg">
-                        <h4>name</h4>
-                        <p>prof</p>
+                        <h4>${data.nameP5}</h4>
+                        <p>${data.titleP5}</p>
                         <img class="crossbtn" src="../img/icons/icon-cross.svg">
                     </div>
                     <div class="image1">
                         <img class="profilepic"  src="../img/icons/avatar-aden.jpg">
-                        <h4>name</h4>
-                        <p>prof</p>
+                        <h4>${data.nameP6}</h4>
+                        <p>${data.titleP6}</p>
                         <img class="crossbtn" src="../img/icons/icon-cross.svg">
                     </div>
                 </div>
@@ -162,7 +163,8 @@ const home = () => {
   };
 
 
-const contact = () => {
+const contact = async () => {
+
     return `
     <section>
     
@@ -186,17 +188,21 @@ const contact = () => {
             </ul>
         </div>
         <div class="right">
-            <input type="text" class="field" id="fname" placeholder="Name">
-            <hr>
-            <input type="text" class="field" id="fname" placeholder="Email Addres">
-            <hr>
-            <input type="text" class="field" id="fname" placeholder="Company Name">
-            <hr>
-            <input type="text" class="field" id="fname" placeholder="Title">
-            <hr>
-            <textarea type="text" class="field" id="fname" placeholder="Message"></textarea>
-            <hr>
-            <button class="btn">submit</button>
+            <form id="contact-form">
+                <input name="name" type="text" class="field" id="user_name" placeholder="Name">
+                <hr>
+                <input name="emailAdd" type="text" class="field" id="user_email" placeholder="Email Addres">
+                <hr>
+                <input name="company" type="text" class="field" id="user_company" placeholder="Company Name">
+                <hr>
+                <input name="title" type="text" class="field" id="title" placeholder="Title">
+                <hr>
+                <textarea name="message" type="text" class="field" id="message" placeholder="Message"></textarea>
+                <hr>
+                <button class="btn" type="submit" id="buttonsubmit">
+                submit
+                </button>        
+            </form>
         </div>
     </div>
     </section>
@@ -233,16 +239,40 @@ const contact = () => {
     };
 
 const routes = {
-    "/": home(),
-    "/contact": contact(),
-    "/about": about()
+    "/": home,
+    "/contact": contact,
+    "/about": about
   };
 
-  const rootDiv = document.getElementById("root");
+  rootDiv=document.getElementById("root");
 
-  const onNavigate = (_pathname) => {    
-    window.history.replaceState(null, null, _pathname);
-    window.history.pushState(null, _pathname, _pathname);
-    rootDiv.innerHTML = routes[_pathname];
+  document.getElementById("root").addEventListener("click", function(event){
+    event.preventDefault()
+  });
+
+const onNavigate = async (_pathname) => {
+  window.history.replaceState(null, null, _pathname);
+  window.history.pushState(null, _pathname, _pathname);
+  rootDiv.innerHTML = await routes[_pathname]();
+
+  _pathname == '/contact' ? submitForm() : false;
 };
 
+const submitForm = () => {
+    let contact = document.getElementById('contact-form');
+    if(contact) {
+        document.getElementById("buttonsubmit").addEventListener("click", (event) => {
+            emailjs.init("user_vSaydeiyGST7PZnU3J0fn");
+            event.preventDefault()
+            let tempParams;
+            tempParams = {
+                user_name : document.getElementById("user_name")?.value,
+                user_email : document.getElementById("user_email")?.value,
+                user_company : document.getElementById("user_company")?.value,
+                title : document.getElementById("title")?.value,
+                message : document.getElementById("message")?.value,
+            }
+            sendMail(tempParams);
+          });
+    }  
+}

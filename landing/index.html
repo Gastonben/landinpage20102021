@@ -3,25 +3,24 @@
     <head>
         <meta charset="utf-8";>
         <link rel="stylesheet" href="./assets/css/style.css/style.css">
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     </head>
     <body>
         <header class="header-1">
                 <img class="logo" src="./img/icons/logo.svg" alt="logo"/>
                 <nav className="nav_links">
                     <ul >
-                        <li><a onclick="onNavigate('/')">home</a></li>
+                        <li><a onclick="onNavigate('/');">home</a></li>
                         <li><a onclick="onNavigate('/about');">about</a></li>
                     </ul>
                 </nav>
                 <a className="header-account"><button onclick="onNavigate('/contact');">contact us</button></a>
             </header>
-
-
             <div id="root"></div>  
             <script src="./assets/js/app.js"></script>   
-            
-            
-           
-    
+            <script src="./assets/js/persons.js"></script>
     </body>
 </html> 
