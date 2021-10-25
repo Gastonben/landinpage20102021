@@ -29,6 +29,18 @@ async function retrievePerson() {
         let person6 = query.get('ocmZMmjfxM');
         let nameP6 = person6.get('name');
         let titleP6 = person6.get('title');
+
+        let person1MP = query.get('2WxWqYIXxj');
+        let name1MP = person1MP.get('name');
+        let title1MP = person1MP.get('title');
+
+        let person2MP = query.get('wKYgnsGFOe');
+        let name2MP = person2MP.get('name');
+        let title2MP = person2MP.get('title');
+
+        let person3MP = query.get('HAadNTMZiy');
+        let name3MP = person3MP.get('name');
+        let title3MP = person3MP.get('title');
     } catch (err) {
         console.log('retrieve failed: ', err);
     }
