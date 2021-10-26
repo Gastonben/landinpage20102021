@@ -24,7 +24,7 @@ a,li,ul {
       justify-content: space-between;
       align-items: center;
       padding: 30px 10%;
-      background-color: #2c6269e8;
+      background-color: #2c6269;
   }
   
   .header-1 li,a,button {
@@ -48,6 +48,6 @@ a,li,ul {
       padding: 9px 25px;
       border: 2px solid white;
       border-radius: 50px;
-      background-color:#2c6269e8;
+      background-color:#2c6269;
       cursor: pointer;
   }
