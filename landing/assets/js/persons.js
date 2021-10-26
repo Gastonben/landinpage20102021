@@ -17,10 +17,10 @@ async function retrievePersonHome() {
         let person3MP = await query.get('HAadNTMZiy');
         name3MP = person3MP.get('name');
         title3MP = person3MP.get('title');
-
+        Rollbar.info("success retrieving data");
         return {name1MP, name2MP, name3MP, title1MP, title2MP, title3MP};
-    } catch (err) {
-        console.log('retrieve failed: ', err);
+    } catch ({error:err}) {
+        Rollbar.error('retrieve failed: ', {error:err});
     }
 }
 
@@ -51,15 +51,16 @@ async function retrievePersonAbout() {
         let person6 = await query.get('ocmZMmjfxM');
         nameP6 = person6.get('name');
         titleP6 = person6.get('title');
+        Rollbar.info("success retrieving data");
         return {nameP1, nameP2, nameP3, nameP4, nameP5, nameP6, titleP1, titleP2, titleP3, titleP4, titleP5, titleP6};
-    } catch (err) {
-        console.log('retrieve failed: ', err);
+    } catch ({error:err}) {
+        Rollbar.error('retrieve failed: ', {error:err});
     }
 }
 
 function sendMail(params){
     emailjs.send(`service_3hounyt`, `template_hh4w0ze`, params)
    .then(function(res){
-        console.log("success", res.status);
+        Rollbar.info("success", res.status);
    });
 }
