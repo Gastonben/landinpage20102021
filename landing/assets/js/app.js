@@ -69,7 +69,7 @@ const home = async() => {
     <h2>Ready to get started?</h2>
     <a href="#">contact us</a>
 </section>
-<footer>
+<footer class="footer-home">
     <div clas="left-footer">
         <a href="">myteam</a>
         <a href="">home</a>
