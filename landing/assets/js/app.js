@@ -2,7 +2,7 @@ const home = async() => {
     const data = await retrievePersonHome();
     return `
     <section>
-    <div class="header">
+    <div class="header-home">
         <img src="./img/icons/bg-pattern-home-1.svg" class="img-1" alt="image-decorate">
         <img src="./img/icons/bg-pattern-home-2.svg" class="img-2" alt="image-decorate-2">
         <div class="header-content">
@@ -18,7 +18,7 @@ const home = async() => {
 </section>
 <section class="first-sec"> 
         <img src="./img/icons/bg-pattern-home-3.svg" class="img-3" alt="image-decorate-3">
-        <h2>Build & manage distributed teams like no one else.</h2>
+            <h2>Build & manage distributed teams like no one else.</h2>
         <div class="content">
             <div class="info">
                 <img src="./img/icons/icon-person.svg" alt="pic">

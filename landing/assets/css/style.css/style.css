@@ -4,10 +4,10 @@
 @import url('../global/contact.css');
 
 /* mobile */
-@import url('../devices/mobile/mobile.css') (max-width: 399px);
+@import url('../devices/mobile/mobile.css') (max-width: 450px);
 
 /* tablet */
-@import url('../devices/tablet/tablet.css') (min-width: 400px);
+@import url('../devices/tablet/tablet.css') (min-width: 451px);
 
 /* desktop */
 @import url('../devices/desktop/desktop.css') (min-width: 900px);
