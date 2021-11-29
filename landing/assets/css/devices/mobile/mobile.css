@@ -1,0 +1,206 @@
+/* nav and header */
+  .nav_links{
+    display: none;
+  }
+  
+  #switch:checked ~ .nav_links {
+    display: block;
+  }
+  
+.img-1,
+.img-2,
+.img-3,
+.img-4,
+.img-5{
+    display: none;
+}
+
+.header-home{
+    display: flex;
+    height:100vh;
+    color: white;
+    background: #2c6269;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+.header-content > h1 {
+    font-size: 3rem;
+    margin: 0 80px 0 70px;
+  }
+
+  .header-content > h1::first-letter{
+      text-transform: uppercase;
+  }
+
+  .header-content > h1 > span{
+      color: #F67E7E;
+  }
+
+  .header-content >  div{
+      width: 80%;
+  }
+  /* nav and header */
+/* <-----------------------> */
+/* first section */
+
+.first-sec,
+.content,
+.second-sec,
+.profiles,
+.profile,
+.info,
+.pre-footer{
+    display: flex;
+}
+
+.first-sec{
+    background: #014d56e1;
+    height: 140vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content{
+    flex-direction: column;
+}
+
+.info{
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+}
+.info > img{
+    width: 20%;
+    height: 20%;
+}
+
+.first-sec > div{
+    width: 70%;
+}
+
+.first-sec > h2{
+    padding: 0 230px 0 20px;
+}
+
+.first-sec > h2,
+.info > p{
+    color: white;
+}
+
+.first-sec > div > h2 {
+    margin:10px;
+    padding: 0 50px;
+}
+
+.info > h4{
+    color: #F67E7E;
+}
+/* first section */
+/* <-----------------------> */
+/* second section */
+.second-sec{
+    height: 250vh;
+    background:#2c6269e8;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profiles,
+.profile{
+    flex-direction: column;
+}
+
+.profile{
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.profile > h3,
+.profile > p{
+    padding: 5px;
+    margin: 5px;
+}
+
+.second-sec > h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.second-sec > h2 > span{
+    color: #6db9b8;
+}
+
+.second-sec > h2,
+.profile > p{
+    color: white;
+}
+
+
+.profile > .prof{
+    border: solid 1px white;
+    border-radius: 100%;
+    width: 30%;
+    height: 30%;
+}
+
+.profile > h3{
+    color: #6db9b8;
+}
+/* second section */
+/* <-----------------------> */
+/* pre footer */
+.pre-footer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background:#F67E7E;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.pre-footer > a{
+    color: black;
+    border: solid 1px black;
+    border-radius: 50px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* pre footer */
+/* <-----------------------> */
+/* footer */
+.footer-home{
+    height: 65vh;
+    background:#014E56;
+    display: flex;
+    padding: 30px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rigth-footer{
+    margin: 15px 0 0 0;
+}
+
+.rigth-footer > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rigth-footer > div > img{  
+    padding: 0 5px;
+}
+/* footer */
+/* <-----------------------> */
